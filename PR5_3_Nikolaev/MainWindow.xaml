@@ -1,0 +1,22 @@
+﻿<Window x:Class="PR5_3_Nikolaev.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR5_3_Nikolaev"
+        mc:Ignorable="d"
+        Title="Животные" Height="220" Width="340">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image Source="{Binding Image}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <ComboBox Grid.Column="1" Width="100px" Height="25px" VerticalAlignment="Top" SelectedIndex="{Binding Index}" ItemsSource="{Binding Str}" 
+                  FontFamily="Times New Roman" FontSize="16"/>
+    </Grid>
+</Window>
