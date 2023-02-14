@@ -1,0 +1,69 @@
+﻿<Window x:Class="PR5_6_Nikolaev_Halle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR5_6_Nikolaev_Halle"
+        mc:Ignorable="d"
+        Title="В мире животных" Height="364" Width="533">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Программа">
+                <MenuItem Header="Выход" Command="{Binding Exit}"/>
+            </MenuItem>
+            <MenuItem Header="Красивые">
+                <MenuItem x:Name="Lisa"  Header="Лиса" Click="Lisa_Click"/>
+                <MenuItem x:Name="Enot" Header="Енот" Click="Enot_Click"/>
+            </MenuItem>
+            <MenuItem Header="Сильные">
+                <MenuItem x:Name="Volk" Header="Волк" Click="Volk_Click"/>
+                <MenuItem x:Name="Beer" Header="Медведь" Click="Beer_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0">
+            <WrapPanel Orientation="Horizontal" ItemWidth="50px" ItemHeight="30px">
+                <Button Click="Volk_Click">
+                    <Image Source="Volk.jpg"/>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock Text="Волк"/>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button Click="Lisa_Click">
+                    <Image Source="Lis.jpeg"/>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock Text="Лиса"/>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button Click="Beer_Click">
+                    <Image Source="Beer.jpeg"/>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock Text="Медведь"/>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <Button Click="Enot_Click">
+                    <Image Source="Enot.jpeg"/>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <TextBlock Text="Енот"/>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </WrapPanel>
+        </ToolBar>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Bottom">
+                <Image Source="{Binding Image}" Width="450px" Height="200px" Margin="0,60,0,0"/>
+                <Button Content="{Binding Str}" Width="150px" Height="40px" Margin="0,10,0,0"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
